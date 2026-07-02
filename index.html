@@ -186,6 +186,58 @@
   @media (prefers-reduced-motion:no-preference){
     .view{animation:rise .2s ease-out;}
   }
+
+  /* ─── ADMIN ─── */
+  .modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,0.55);z-index:1000;display:flex;align-items:center;justify-content:center;padding:16px;}
+  .modal-box{background:#fff;border-radius:10px;padding:28px 24px;width:100%;max-width:420px;box-shadow:0 24px 60px rgba(0,0,0,0.3);}
+  .modal-box h2{font-family:var(--serif);font-size:20px;color:var(--navy);margin:0 0 16px;}
+  .modal-input{width:100%;padding:11px 12px;font-size:15px;border:1px solid var(--line);border-radius:5px;margin-bottom:12px;font-family:var(--sans);}
+  .modal-input:focus{outline:2px solid var(--navy);}
+  .modal-err{color:#b00020;font-size:12.5px;font-family:var(--mono);margin:-8px 0 10px;}
+  .modal-row{display:flex;gap:8px;justify-content:flex-end;}
+  .btn-primary{background:var(--navy);color:#fff;border:none;padding:10px 20px;border-radius:5px;font-family:var(--mono);font-size:12px;text-transform:uppercase;letter-spacing:0.5px;cursor:pointer;}
+  .btn-primary:hover{background:var(--navy-deep);}
+  .btn-ghost{background:none;border:1px solid var(--line);color:var(--ink-soft);padding:10px 16px;border-radius:5px;font-family:var(--mono);font-size:12px;text-transform:uppercase;cursor:pointer;}
+  .btn-ghost:hover{border-color:var(--navy);color:var(--navy);}
+  .btn-danger{background:#b00020;color:#fff;border:none;padding:7px 14px;border-radius:4px;font-family:var(--mono);font-size:11px;text-transform:uppercase;cursor:pointer;}
+  .btn-danger:hover{background:#8b0016;}
+  .btn-sm{padding:5px 10px;font-size:10.5px;border-radius:4px;}
+  .adm-view{animation:rise .2s ease-out;}
+  .adm-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:18px;flex-wrap:wrap;gap:8px;}
+  .adm-title{font-family:var(--serif);font-size:20px;color:var(--navy);margin:0;}
+  .adm-sub{font-family:var(--mono);font-size:11px;color:var(--ink-soft);text-transform:uppercase;letter-spacing:0.5px;margin-top:2px;}
+  .adm-actions{display:flex;gap:8px;flex-wrap:wrap;}
+  .adm-tabs{display:flex;gap:0;margin-bottom:18px;}
+  .adm-tab{font-family:var(--mono);font-size:11.5px;text-transform:uppercase;letter-spacing:0.5px;background:var(--bg);color:var(--ink-soft);border:1px solid var(--line);border-bottom:none;padding:9px 16px;cursor:pointer;border-radius:6px 6px 0 0;position:relative;top:1px;}
+  .adm-tab.active{background:var(--card);color:var(--navy);font-weight:700;}
+  .adm-panel{background:var(--card);border:1px solid var(--line);border-radius:0 8px 8px 8px;padding:20px 16px;box-shadow:0 1px 3px rgba(0,0,0,0.04);}
+  .adm-filter-row{display:flex;gap:8px;margin-bottom:14px;align-items:center;flex-wrap:wrap;}
+  .adm-filter-row select,.adm-filter-row input[type="search"]{font-size:13px;padding:8px 10px;border:1px solid var(--line);border-radius:4px;background:#fff;color:var(--ink);flex:1;min-width:120px;}
+  .adm-filter-row select:focus,.adm-filter-row input[type="search"]:focus{outline:2px solid var(--navy);}
+  .adm-count{font-family:var(--mono);font-size:11px;color:var(--ink-soft);}
+  .adm-table-wrap{overflow-x:auto;max-height:420px;overflow-y:auto;border:1px solid var(--line);border-radius:4px;}
+  table.adm-table{width:100%;border-collapse:collapse;font-size:12.5px;}
+  table.adm-table th{font-family:var(--mono);font-size:10px;text-transform:uppercase;color:var(--ink-soft);text-align:left;padding:7px 8px;border-bottom:1px solid var(--line);position:sticky;top:0;background:#fff;z-index:1;}
+  table.adm-table td{padding:7px 8px;border-bottom:1px dotted var(--line);vertical-align:top;}
+  table.adm-table tr:hover td{background:var(--bg);}
+  table.adm-table .td-btns{white-space:nowrap;display:flex;gap:4px;}
+  .btn-edit{font-family:var(--mono);font-size:10px;text-transform:uppercase;background:none;border:1px solid var(--navy-soft);color:var(--navy);padding:3px 8px;border-radius:3px;cursor:pointer;}
+  .btn-edit:hover{background:var(--navy);color:#fff;}
+  .btn-del{font-family:var(--mono);font-size:10px;text-transform:uppercase;background:none;border:1px solid #d9534f;color:#b00020;padding:3px 8px;border-radius:3px;cursor:pointer;}
+  .btn-del:hover{background:#b00020;color:#fff;}
+  .badge-new{font-family:var(--mono);font-size:9px;background:#e8f4e8;color:var(--green-deep);border:1px solid var(--green);padding:1px 6px;border-radius:8px;margin-left:4px;}
+  .badge-edit{font-family:var(--mono);font-size:9px;background:#e8eef8;color:var(--navy);border:1px solid var(--navy-soft);padding:1px 6px;border-radius:8px;margin-left:4px;}
+  .adm-form{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
+  .adm-form label{font-family:var(--mono);font-size:10.5px;text-transform:uppercase;color:var(--ink-soft);display:block;margin-bottom:3px;}
+  .adm-form .full{grid-column:1/-1;}
+  .adm-form input,.adm-form select{width:100%;padding:9px 10px;font-size:13.5px;border:1px solid var(--line);border-radius:4px;background:#fff;color:var(--ink);font-family:var(--sans);}
+  .adm-form input:focus,.adm-form select:focus{outline:2px solid var(--navy);}
+  .adm-form .form-actions{grid-column:1/-1;display:flex;gap:8px;justify-content:flex-end;margin-top:6px;}
+  .adm-save-bar{margin-top:14px;background:#f0f7ee;border:1px solid var(--green);border-radius:6px;padding:12px 14px;display:flex;align-items:center;justify-content:space-between;gap:8px;flex-wrap:wrap;}
+  .adm-save-bar span{font-family:var(--mono);font-size:11.5px;color:var(--green-deep);}
+  .lock-btn{background:none;border:none;font-size:16px;cursor:pointer;opacity:0.5;padding:2px 6px;border-radius:4px;vertical-align:middle;}
+  .lock-btn:hover{opacity:1;background:var(--bg);}
+
 </style>
 </head>
 <body>
@@ -362,11 +414,241 @@
       <div id="qr-wrap" hidden></div>
     </div>
   </div>
+
+  <!-- PASSWORD MODAL -->
+  <div class="modal-overlay" id="modal-pw" hidden>
+    <div class="modal-box">
+      <h2>🔐 Painel Administrativo</h2>
+      <input class="modal-input" id="pw-input" type="password" placeholder="Senha de acesso" autocomplete="off">
+      <div class="modal-err" id="pw-err" hidden>Senha incorreta. Tente novamente.</div>
+      <div class="modal-row">
+        <button class="btn-ghost" onclick="closeModal()">Cancelar</button>
+        <button class="btn-primary" onclick="checkPw()">Entrar</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- EDIT ENTRY MODAL -->
+  <div class="modal-overlay" id="modal-edit" hidden>
+    <div class="modal-box" style="max-width:520px;">
+      <h2 id="edit-modal-title">Editar entrada</h2>
+      <div class="adm-form" id="edit-form-fields"></div>
+      <div style="display:flex;gap:8px;justify-content:flex-end;margin-top:16px;">
+        <button class="btn-ghost" onclick="closeEditModal()">Cancelar</button>
+        <button class="btn-primary" onclick="saveEditModal()">Salvar</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- CONFIRM DELETE MODAL -->
+  <div class="modal-overlay" id="modal-del" hidden>
+    <div class="modal-box" style="max-width:360px;">
+      <h2>Excluir entrada?</h2>
+      <p style="font-size:13.5px;color:var(--ink-soft);margin:0 0 16px;" id="del-desc"></p>
+      <div class="modal-row">
+        <button class="btn-ghost" onclick="document.getElementById('modal-del').hidden=true;">Cancelar</button>
+        <button class="btn-danger" onclick="confirmDelete()">Excluir</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- CHANGE PASSWORD MODAL -->
+  <div class="modal-overlay" id="modal-chpw" hidden>
+    <div class="modal-box" style="max-width:380px;">
+      <h2>Alterar senha</h2>
+      <input class="modal-input" id="chpw-new" type="password" placeholder="Nova senha">
+      <input class="modal-input" id="chpw-conf" type="password" placeholder="Confirmar nova senha">
+      <div class="modal-err" id="chpw-err" hidden></div>
+      <div class="modal-row">
+        <button class="btn-ghost" onclick="document.getElementById('modal-chpw').hidden=true;">Cancelar</button>
+        <button class="btn-primary" onclick="savePwChange()">Salvar senha</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ADMIN VIEW -->
+  <div class="view adm-view" id="view-admin" hidden>
+    <div class="adm-header">
+      <div>
+        <div class="adm-title">⚙️ Painel Administrativo</div>
+        <div class="adm-sub">editar · adicionar · remover entradas de horário</div>
+      </div>
+      <div class="adm-actions">
+        <button class="btn-ghost btn-sm" onclick="openChPw()">Alterar senha</button>
+        <button class="btn-danger btn-sm" onclick="resetData()">Resetar dados</button>
+        <button class="btn-ghost btn-sm" onclick="goHome()">← Voltar</button>
+      </div>
+    </div>
+
+    <div class="adm-tabs">
+      <button class="adm-tab active" data-atab="listar">Listar / Editar</button>
+      <button class="adm-tab" data-atab="professores">Professores</button>
+      <button class="adm-tab" data-atab="adicionar">Adicionar entrada</button>
+    </div>
+
+    <!-- LISTAR -->
+    <div class="adm-panel" id="atab-listar">
+      <div class="adm-filter-row">
+        <select id="adm-sel-curso">
+          <option value="">Todos os cursos</option>
+          <option value="ADM">Administração</option>
+          <option value="CC">Ciências Contábeis</option>
+          <option value="DIR">Direito</option>
+          <option value="ENF">Enfermagem</option>
+          <option value="FIS">Fisioterapia</option>
+          <option value="NUT">Nutrição</option>
+          <option value="PSI">Psicologia</option>
+        </select>
+        <input type="search" id="adm-busca" placeholder="Buscar professor ou disciplina…">
+        <span class="adm-count" id="adm-count"></span>
+      </div>
+      <div class="adm-table-wrap">
+        <table class="adm-table" id="adm-table">
+          <thead>
+            <tr>
+              <th>#</th><th>Curso</th><th>Turma</th><th>Dia</th><th>Horário</th>
+              <th>Disciplina</th><th>Professor</th><th></th>
+            </tr>
+          </thead>
+          <tbody id="adm-tbody"></tbody>
+        </table>
+      </div>
+      <div class="adm-save-bar" id="adm-savebar" hidden>
+        <span id="adm-change-count"></span>
+        <button class="btn-primary btn-sm" onclick="persistData()">💾 Salvar alterações</button>
+      </div>
+    </div>
+
+    <!-- ADICIONAR -->
+    <!-- PROFESSORES -->
+    <div class="adm-panel" id="atab-professores" hidden>
+      <div class="adm-filter-row">
+        <input type="search" id="prof-busca" placeholder="Buscar professor(a)…" style="flex:1;">
+        <select id="prof-sel-curso">
+          <option value="">Todos os cursos</option>
+          <option value="ADM">Administração</option>
+          <option value="CC">Ciências Contábeis</option>
+          <option value="DIR">Direito</option>
+          <option value="ENF">Enfermagem</option>
+          <option value="FIS">Fisioterapia</option>
+          <option value="NUT">Nutrição</option>
+          <option value="PSI">Psicologia</option>
+        </select>
+        <span class="adm-count" id="prof-count"></span>
+      </div>
+      <div class="adm-table-wrap">
+        <table class="adm-table">
+          <thead>
+            <tr>
+              <th>Professor(a)</th>
+              <th>Curso(s)</th>
+              <th>Turmas</th>
+              <th>Aulas/sem</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody id="prof-tbody"></tbody>
+        </table>
+      </div>
+      <div class="adm-save-bar" id="prof-savebar" hidden>
+        <span id="prof-change-count"></span>
+        <button class="btn-primary btn-sm" onclick="persistData()">💾 Salvar alterações</button>
+      </div>
+    </div>
+
+    <!-- MODAL EDITAR PROFESSOR -->
+    <div class="modal-overlay" id="modal-prof" hidden>
+      <div class="modal-box" style="max-width:440px;">
+        <div class="modal-title" id="prof-modal-title">Editar professor(a)</div>
+        <div style="margin-bottom:14px;">
+          <label style="font-family:var(--mono);font-size:11px;text-transform:uppercase;color:var(--ink-soft);display:block;margin-bottom:6px;">Nome atual</label>
+          <div id="prof-nome-atual" style="font-size:14px;color:var(--ink-soft);padding:8px;background:var(--bg);border-radius:4px;border:1px solid var(--line);margin-bottom:12px;"></div>
+          <label style="font-family:var(--mono);font-size:11px;text-transform:uppercase;color:var(--ink-soft);display:block;margin-bottom:6px;">Novo nome</label>
+          <input class="modal-input" id="prof-nome-novo" type="text" placeholder="Nome completo em MAIÚSCULAS" autocomplete="off">
+        </div>
+        <div style="font-family:var(--mono);font-size:11px;color:var(--ink-soft);margin-bottom:14px;" id="prof-modal-info"></div>
+        <div class="modal-err" id="prof-modal-err" hidden></div>
+        <div class="modal-row">
+          <button class="btn-ghost" onclick="closeProfModal()">Cancelar</button>
+          <button class="btn-primary" onclick="saveProfEdit()">Atualizar em todas as entradas</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- MODAL REMOVER PROFESSOR -->
+    <div class="modal-overlay" id="modal-prof-del" hidden>
+      <div class="modal-box" style="max-width:400px;">
+        <div class="modal-title" style="color:#b00020;">Remover professor(a)?</div>
+        <p style="font-size:13.5px;color:var(--ink-soft);">Isso vai excluir <strong id="prof-del-count"></strong> entradas de horário de <strong id="prof-del-nome"></strong>. Essa ação pode ser desfeita com "Resetar dados".</p>
+        <div class="modal-row">
+          <button class="btn-ghost" onclick="document.getElementById('modal-prof-del').hidden=true;">Cancelar</button>
+          <button class="btn-danger" onclick="confirmProfDel()">Remover tudo</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="adm-panel" id="atab-adicionar" hidden>
+      <div class="adm-form" id="add-form">
+        <div>
+          <label>Curso</label>
+          <select id="add-curso">
+            <option value="ADM">Administração</option>
+            <option value="CC">Ciências Contábeis</option>
+            <option value="DIR" selected>Direito</option>
+            <option value="ENF">Enfermagem</option>
+            <option value="FIS">Fisioterapia</option>
+            <option value="NUT">Nutrição</option>
+            <option value="PSI">Psicologia</option>
+          </select>
+        </div>
+        <div>
+          <label>Turma (ex: DIR-5N)</label>
+          <input type="text" id="add-turma" placeholder="DIR-5N">
+        </div>
+        <div>
+          <label>Dia</label>
+          <select id="add-dia">
+            <option>Segunda</option><option>Terça</option><option>Quarta</option>
+            <option>Quinta</option><option>Sexta</option>
+          </select>
+        </div>
+        <div>
+          <label>Horário</label>
+          <select id="add-hora">
+            <option>07:45–09:15</option>
+            <option>09:30–11:00</option>
+            <option>07:45–11:00</option>
+            <option>19:00–20:30</option>
+            <option>19:00–22:00</option>
+            <option>20:45–22:00</option>
+          </select>
+        </div>
+        <div>
+          <label>Turno</label>
+          <select id="add-turno"><option>Manhã</option><option selected>Noite</option></select>
+        </div>
+        <div class="full">
+          <label>Disciplina</label>
+          <input type="text" id="add-disc" placeholder="Nome da disciplina">
+        </div>
+        <div class="full">
+          <label>Professor(a)</label>
+          <input type="text" id="add-prof" placeholder="Nome completo em MAIÚSCULAS">
+        </div>
+        <div class="form-actions">
+          <button class="btn-ghost" onclick="clearAddForm()">Limpar</button>
+          <button class="btn-primary" onclick="addEntry()">✚ Adicionar</button>
+        </div>
+      </div>
+      <div id="add-feedback" style="margin-top:12px;"></div>
+    </div>
+  </div>
+
 </main>
 
 <footer>
   UniCatólica RN · 2026.2 · documento de uso interno<br>
-  Desenvolvido por Pietro Medeiros · @pietromedeiross
+  Desenvolvido por Pietro Medeiros · @pietromedeiross &nbsp;<button class="lock-btn" onclick="openAdminModal()" title="Acesso administrativo">🔐</button>
 </footer>
 
 <script>
@@ -706,7 +988,7 @@ var viewMode = 'lista';
 
 /* ─── NAVIGATION ─── */
 function showView(id){
-  ['view-home','view-dash','view-course'].forEach(function(v){
+  ['view-home','view-dash','view-course','view-admin'].forEach(function(v){
     document.getElementById(v).hidden = (v !== id);
   });
 }
@@ -993,6 +1275,380 @@ function renderDashboard(){
   }
   document.getElementById('dash-multi').innerHTML = multiHtml;
 }
+
+/* ─── ADMIN ─── */
+var DEFAULT_HASH = '59ecf63d'; // FNV-1a hash of 'unicatolica2026'
+var PENDING_CHANGES = 0;
+var pendingDeleteIdx = -1;
+var editingIdx = -1;
+var RUNTIME_DATA = null; // mutable copy
+
+function simpleHash(str){
+  var h = 0x811c9dc5|0;
+  for(var i=0;i<str.length;i++){ h ^= str.charCodeAt(i); h = Math.imul(h,0x01000193); }
+  return (h>>>0).toString(16).padStart(8,'0');
+}
+function getStoredHash(){ return localStorage.getItem('ucn_pw_hash')||DEFAULT_HASH; }
+function getAdmData(){
+  if(RUNTIME_DATA) return RUNTIME_DATA;
+  try{
+    var saved = localStorage.getItem('ucn_data');
+    if(saved){ RUNTIME_DATA = JSON.parse(saved); return RUNTIME_DATA; }
+  }catch(e){}
+  RUNTIME_DATA = DATA.map(function(e){ return Object.assign({},e); });
+  return RUNTIME_DATA;
+}
+
+/* password modal */
+function openAdminModal(){
+  document.getElementById('modal-pw').hidden=false;
+  document.getElementById('pw-input').value='';
+  document.getElementById('pw-err').hidden=true;
+  setTimeout(function(){ document.getElementById('pw-input').focus(); },50);
+}
+function closeModal(){ document.getElementById('modal-pw').hidden=true; }
+function checkPw(){
+  var val = document.getElementById('pw-input').value;
+  if(simpleHash(val)===getStoredHash()){
+    closeModal(); openAdmin();
+  } else {
+    document.getElementById('pw-err').hidden=false;
+    document.getElementById('pw-input').value='';
+    document.getElementById('pw-input').focus();
+  }
+}
+document.getElementById('pw-input').addEventListener('keydown',function(ev){ if(ev.key==='Enter') checkPw(); });
+
+/* admin view */
+function openAdmin(){
+  PENDING_CHANGES=0;
+  showView('view-admin');
+  updateCrumbs(['⚙️ Admin']);
+  renderAdmTable();
+}
+
+/* adm inner tabs */
+document.querySelectorAll('.adm-tab').forEach(function(btn){
+  btn.addEventListener('click',function(){
+    var tab=this.dataset.atab;
+    document.querySelectorAll('.adm-tab').forEach(function(b){ b.classList.toggle('active',b.dataset.atab===tab); });
+    document.getElementById('atab-listar').hidden=(tab!=='listar');
+    document.getElementById('atab-professores').hidden=(tab!=='professores');
+    document.getElementById('atab-adicionar').hidden=(tab!=='adicionar');
+    if(tab==='professores') renderProfTable();
+  });
+});
+
+/* table render */
+function renderAdmTable(){
+  var data = getAdmData();
+  var curso = document.getElementById('adm-sel-curso').value;
+  var termo = document.getElementById('adm-busca').value.trim().toLowerCase();
+  var rows = data.map(function(e,i){ return {e:e,i:i}; }).filter(function(r){
+    if(curso && r.e.curso!==curso) return false;
+    if(termo && (r.e.prof.toLowerCase().indexOf(termo)===-1 && r.e.disc.toLowerCase().indexOf(termo)===-1)) return false;
+    return true;
+  });
+  document.getElementById('adm-count').textContent = rows.length+' / '+data.length+' entradas';
+  var tbody = document.getElementById('adm-tbody');
+  tbody.innerHTML='';
+  rows.forEach(function(r){
+    var e=r.e, i=r.i;
+    var badges='';
+    if(e._new) badges+='<span class="badge-new">Novo</span>';
+    if(e._edited) badges+='<span class="badge-edit">Editado</span>';
+    var tr=document.createElement('tr');
+    tr.innerHTML=
+      '<td style="font-family:var(--mono);font-size:10px;color:var(--ink-soft);">'+(i+1)+'</td>'+
+      '<td><strong>'+r.e.curso+'</strong></td>'+
+      '<td>'+r.e.turma+'</td>'+
+      '<td style="font-family:var(--mono);font-size:11px;">'+r.e.dia+'</td>'+
+      '<td style="font-family:var(--mono);font-size:11px;white-space:nowrap;">'+r.e.hora+'</td>'+
+      '<td>'+r.e.disc+'</td>'+
+      '<td>'+r.e.prof+badges+'</td>'+
+      '<td><div class="td-btns">'+
+        '<button class="btn-edit" data-i="'+i+'">Editar</button>'+
+        '<button class="btn-del" data-i="'+i+'">✕</button>'+
+      '</div></td>';
+    tbody.appendChild(tr);
+  });
+  updateSavebar();
+}
+document.getElementById('adm-tbody').addEventListener('click',function(ev){
+  var editBtn=ev.target.closest('.btn-edit');
+  var delBtn=ev.target.closest('.btn-del');
+  if(editBtn) openEditModal(parseInt(editBtn.dataset.i,10));
+  if(delBtn) openDelModal(parseInt(delBtn.dataset.i,10));
+});
+document.getElementById('adm-sel-curso').addEventListener('change', renderAdmTable);
+document.getElementById('adm-busca').addEventListener('input', renderAdmTable);
+
+/* EDIT MODAL */
+var FIELD_DEFS=[
+  {key:'curso',label:'Curso',type:'select',opts:['ADM','CC','DIR','ENF','FIS','NUT','PSI']},
+  {key:'turma',label:'Turma',type:'text'},
+  {key:'dia',label:'Dia',type:'select',opts:['Segunda','Terça','Quarta','Quinta','Sexta']},
+  {key:'hora',label:'Horário',type:'select',opts:['07:45–09:15','09:30–11:00','07:45–11:00','19:00–20:30','19:00–22:00','20:45–22:00']},
+  {key:'turno',label:'Turno',type:'select',opts:['Manhã','Noite']},
+  {key:'disc',label:'Disciplina',type:'text',full:true},
+  {key:'prof',label:'Professor(a)',type:'text',full:true},
+];
+function openEditModal(idx){
+  editingIdx=idx;
+  var e=getAdmData()[idx];
+  document.getElementById('edit-modal-title').textContent='Editar entrada #'+(idx+1);
+  var html='<div class="adm-form" id="edit-form-fields">';
+  FIELD_DEFS.forEach(function(f){
+    html+='<div class="'+(f.full?'full':'')+'">';
+    html+='<label>'+f.label+'</label>';
+    if(f.type==='select'){
+      html+='<select id="ef-'+f.key+'">';
+      f.opts.forEach(function(o){ html+='<option'+(e[f.key]===o?' selected':'')+'>'+o+'</option>'; });
+      html+='</select>';
+    } else {
+      html+='<input type="text" id="ef-'+f.key+'" value="'+esc(e[f.key]||'')+'">';
+    }
+    html+='</div>';
+  });
+  html+='</div>';
+  document.getElementById('edit-form-fields').outerHTML=html;
+  document.getElementById('modal-edit').hidden=false;
+}
+function esc(s){ return String(s).replace(/"/g,'&quot;').replace(/</g,'&lt;'); }
+function closeEditModal(){ document.getElementById('modal-edit').hidden=true; editingIdx=-1; }
+function saveEditModal(){
+  if(editingIdx<0) return;
+  var data=getAdmData();
+  var e=data[editingIdx];
+  FIELD_DEFS.forEach(function(f){
+    var el=document.getElementById('ef-'+f.key);
+    if(el) e[f.key]=el.value.trim();
+  });
+  e._edited=true;
+  PENDING_CHANGES++;
+  closeEditModal();
+  renderAdmTable();
+}
+
+/* DELETE MODAL */
+function openDelModal(idx){
+  pendingDeleteIdx=idx;
+  var e=getAdmData()[idx];
+  document.getElementById('del-desc').textContent=
+    e.prof+' · '+e.disc+' · '+e.turma+' ('+e.dia+', '+e.hora+')';
+  document.getElementById('modal-del').hidden=false;
+}
+function confirmDelete(){
+  if(pendingDeleteIdx<0) return;
+  var data=getAdmData();
+  data.splice(pendingDeleteIdx,1);
+  PENDING_CHANGES++;
+  pendingDeleteIdx=-1;
+  document.getElementById('modal-del').hidden=true;
+  renderAdmTable();
+}
+
+/* SAVE BAR */
+function updateSavebar(){
+  var bar=document.getElementById('adm-savebar');
+  if(PENDING_CHANGES>0){
+    bar.hidden=false;
+    document.getElementById('adm-change-count').textContent=
+      PENDING_CHANGES+' alteração(ões) não salva(s)';
+  } else { bar.hidden=true; }
+}
+function persistData(){
+  try{
+    localStorage.setItem('ucn_data', JSON.stringify(getAdmData()));
+    PENDING_CHANGES=0;
+    updateSavebar();
+    alert('✅ Dados salvos com sucesso! As alterações já estão visíveis no app.');
+    // rebuild static stats hint for user
+  } catch(e){ alert('Erro ao salvar: '+e.message); }
+}
+
+/* ADD FORM */
+function clearAddForm(){
+  ['add-turma','add-disc','add-prof'].forEach(function(id){ document.getElementById(id).value=''; });
+}
+function addEntry(){
+  var curso=document.getElementById('add-curso').value;
+  var turma=document.getElementById('add-turma').value.trim();
+  var dia=document.getElementById('add-dia').value;
+  var hora=document.getElementById('add-hora').value;
+  var turno=document.getElementById('add-turno').value;
+  var disc=document.getElementById('add-disc').value.trim();
+  var prof=document.getElementById('add-prof').value.trim();
+  if(!turma||!disc||!prof){
+    document.getElementById('add-feedback').innerHTML='<p style="color:#b00020;font-family:var(--mono);font-size:12px;">Preencha Turma, Disciplina e Professor(a).</p>';
+    return;
+  }
+  var data=getAdmData();
+  data.push({curso:curso,turma:turma,dia:dia,hora:hora,turno:turno,disc:disc,prof:prof,_new:true});
+  PENDING_CHANGES++;
+  document.getElementById('add-feedback').innerHTML=
+    '<p style="color:var(--green-deep);font-family:var(--mono);font-size:12px;">✔ Entrada adicionada. Vá em "Listar / Editar" para salvar.</p>';
+  clearAddForm();
+}
+
+/* CHANGE PASSWORD */
+function openChPw(){
+  document.getElementById('modal-chpw').hidden=false;
+  document.getElementById('chpw-new').value='';
+  document.getElementById('chpw-conf').value='';
+  document.getElementById('chpw-err').hidden=true;
+}
+function savePwChange(){
+  var np=document.getElementById('chpw-new').value;
+  var nc=document.getElementById('chpw-conf').value;
+  var err=document.getElementById('chpw-err');
+  if(np.length<4){ err.textContent='Senha deve ter no mínimo 4 caracteres.'; err.hidden=false; return; }
+  if(np!==nc){ err.textContent='As senhas não coincidem.'; err.hidden=false; return; }
+  localStorage.setItem('ucn_pw_hash', simpleHash(np));
+  document.getElementById('modal-chpw').hidden=true;
+  alert('✅ Senha alterada com sucesso!');
+}
+
+/* RESET */
+function resetData(){
+  if(!confirm('Isso vai apagar todas as edições e restaurar os dados originais. Continuar?')) return;
+  localStorage.removeItem('ucn_data');
+  RUNTIME_DATA = null;
+  PENDING_CHANGES=0;
+  alert('✅ Dados restaurados para o original.');
+  renderAdmTable();
+}
+
+/* ─── PROFESSORES PANEL ─── */
+var editingProfNome = null;
+var deletingProfNome = null;
+
+function buildProfIndex(){
+  var data = getAdmData();
+  var idx = {};
+  data.forEach(function(e){
+    if(!e.prof || e.vaga) return;
+    var p = e.prof;
+    if(!idx[p]) idx[p] = {cursos:{}, turmas:{}, count:0};
+    idx[p].cursos[e.curso] = 1;
+    idx[p].turmas[e.turma] = 1;
+    idx[p].count++;
+  });
+  return idx;
+}
+
+function renderProfTable(){
+  var idx = buildProfIndex();
+  var termo = (document.getElementById('prof-busca').value||'').trim().toLowerCase();
+  var curso = document.getElementById('prof-sel-curso').value;
+  var profs = Object.keys(idx).sort(function(a,b){ return a.localeCompare(b,'pt-BR'); });
+  var filtrados = profs.filter(function(p){
+    if(termo && p.toLowerCase().indexOf(termo)===-1) return false;
+    if(curso && !idx[p].cursos[curso]) return false;
+    return true;
+  });
+  document.getElementById('prof-count').textContent = filtrados.length + ' professor(es)';
+  var tbody = document.getElementById('prof-tbody');
+  tbody.innerHTML = '';
+  filtrados.forEach(function(p){
+    var info = idx[p];
+    var cods = Object.keys(info.cursos).sort();
+    var turmas = Object.keys(info.turmas).sort();
+    var tr = document.createElement('tr');
+    tr.innerHTML =
+      '<td style="font-weight:600;font-size:13px;">' + p + '</td>' +
+      '<td style="font-family:var(--mono);font-size:10.5px;">' + cods.join(', ') + '</td>' +
+      '<td style="font-family:var(--mono);font-size:10.5px;">' + turmas.join(', ') + '</td>' +
+      '<td style="font-family:var(--mono);font-size:12px;text-align:center;">' + info.count + '</td>' +
+      '<td><div class="td-btns">' +
+        '<button class="btn-edit" data-prof="' + esc(p) + '">✏️ Renomear</button>' +
+        '<button class="btn-del" data-prof="' + esc(p) + '">✕</button>' +
+      '</div></td>';
+    tbody.appendChild(tr);
+  });
+  document.getElementById('prof-savebar').hidden = (PENDING_CHANGES === 0);
+  if(PENDING_CHANGES>0) document.getElementById('prof-change-count').textContent = PENDING_CHANGES + ' alteração(ões) não salva(s)';
+}
+
+document.getElementById('prof-busca').addEventListener('input', renderProfTable);
+document.getElementById('prof-sel-curso').addEventListener('change', renderProfTable);
+
+document.getElementById('prof-tbody').addEventListener('click', function(ev){
+  var editBtn = ev.target.closest('.btn-edit');
+  var delBtn  = ev.target.closest('.btn-del');
+  if(editBtn) openProfModal(editBtn.dataset.prof);
+  if(delBtn)  openProfDelModal(delBtn.dataset.prof);
+});
+
+function openProfModal(nome){
+  editingProfNome = nome;
+  var idx = buildProfIndex()[nome] || {};
+  var cods = Object.keys(idx.cursos||{}).map(function(c){ return CURSOS_NOME[c]||c; }).join(', ');
+  var turmas = Object.keys(idx.turmas||{}).join(', ');
+  document.getElementById('prof-nome-atual').textContent = nome;
+  document.getElementById('prof-nome-novo').value = nome;
+  document.getElementById('prof-modal-info').textContent =
+    (idx.count||0) + ' entradas · Cursos: ' + cods + ' · Turmas: ' + turmas;
+  document.getElementById('prof-modal-err').hidden = true;
+  document.getElementById('modal-prof').hidden = false;
+  setTimeout(function(){
+    var el = document.getElementById('prof-nome-novo');
+    el.focus(); el.select();
+  }, 60);
+}
+function closeProfModal(){ document.getElementById('modal-prof').hidden = true; editingProfNome = null; }
+
+function saveProfEdit(){
+  var novoNome = document.getElementById('prof-nome-novo').value.trim();
+  var err = document.getElementById('prof-modal-err');
+  if(!novoNome){ err.textContent='O nome não pode ficar vazio.'; err.hidden=false; return; }
+  if(novoNome === editingProfNome){ closeProfModal(); return; }
+  var data = getAdmData();
+  var count = 0;
+  data.forEach(function(e){
+    if(e.prof === editingProfNome){ e.prof = novoNome; e._edited = true; count++; }
+  });
+  PENDING_CHANGES += count;
+  closeProfModal();
+  renderProfTable();
+  renderAdmTable();
+}
+
+function openProfDelModal(nome){
+  deletingProfNome = nome;
+  var idx = buildProfIndex()[nome] || {};
+  document.getElementById('prof-del-nome').textContent = nome;
+  document.getElementById('prof-del-count').textContent = (idx.count||0);
+  document.getElementById('modal-prof-del').hidden = false;
+}
+function confirmProfDel(){
+  if(!deletingProfNome) return;
+  var data = getAdmData();
+  var before = data.length;
+  for(var i = data.length-1; i >= 0; i--){
+    if(data[i].prof === deletingProfNome) data.splice(i,1);
+  }
+  PENDING_CHANGES += (before - data.length);
+  deletingProfNome = null;
+  document.getElementById('modal-prof-del').hidden = true;
+  renderProfTable();
+  renderAdmTable();
+}
+
+/* ─── LOCK BUTTON — init DATA from localStorage on startup ─── */
+(function initFromStorage(){
+  try{
+    var saved = localStorage.getItem('ucn_data');
+    if(saved){
+      var parsed = JSON.parse(saved);
+      // Patch the module-level DATA in place
+      DATA.length=0;
+      parsed.forEach(function(e){ DATA.push(e); });
+      RUNTIME_DATA = DATA;
+    }
+  }catch(e){}
+})();
+
 </script>
 </body>
 </html>
